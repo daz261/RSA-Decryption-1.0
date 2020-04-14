@@ -12,12 +12,23 @@ The RSA Decryption app demonstrates how to use RSA decryption in order to decryp
 </ul>
 
 <h2>Use</h2>
-Download the repository, open it with Android Studio and press run. The app was meant to be deployed on an Android device, because of the scanning capabilities that are more difficult to simulate on the Android emulator. If you want to change the name of the 
+<ol>
+  <li>Download the repository and open it with Android Studio.</li>
+  <li>In the app-level build.gradle change the name of the app from "com.example.mlkit_barcode_ocr" to your desired name.</li>
+  <li>Register the app with <a href="https://firebase.google.com/docs/android/setup">Firebase</a>, download the .json file and add it in the <b>app folder</b>. 
+</ol> 
 
-In the app-level build.gradle change the name of the app from 'com.server
-  
-# Barcode Detection
+It is recommended that you deploy the app on an Android device, because of the scanning capabilities that are easier to use on a phone. However, if you want to use the Android emulator, you can make the most of the app by changing the camera settings of the emulator to the computer's webcam. Under Tools > AVD Manager, select the "pencil" to get to "Virtual Device Configuration". Show Advanced Settings > Camera will give you the option of using emulated, webcam0 or none. Select Webcam0 for the Front camera.
+
+Press run. The rest of the instructions are shown on the screen.
+![](RSA_Decryption_App_Screenshot.png). 
+
+As a first stem, you will have to scan the private key in QR format. Some examples can be found under Tests/.
+
+<h2>Barcode Detection</h2>
+
 ![](barcode.gif)
 
-# Text Detection
+<h2>Text Detection</h2>
+
 ![](ocr.gif)
